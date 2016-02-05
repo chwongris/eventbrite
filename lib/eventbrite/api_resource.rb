@@ -25,8 +25,8 @@ module Eventbrite
       self
     end
 
-    def self.retrieve(id, token=nil, params={})
-      instance = self.new(id, token, params)
+    def self.retrieve(id, token=nil)
+      instance = self.new(id, token)
       instance.refresh
       instance
     end
