@@ -1,4 +1,5 @@
 module Eventbrite
+
   class Order < APIArrayResource
     def self.url
       "/orders"
@@ -9,4 +10,5 @@ module Eventbrite
       Util.convert_to_eventbrite_object(response, token)
     end
   end
+
 end
