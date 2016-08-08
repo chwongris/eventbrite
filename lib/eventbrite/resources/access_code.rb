@@ -1,8 +1,7 @@
 module Eventbrite
   class AccessCode < APIArrayResource
     def self.create(body, token=nil)
-      binding.pry
-      response, token = Eventbrite.request(:post, url, token, body)
+      response, token = Eventbrite.request(:post, url.access_code_url, token, body)
       Util.convert_to_eventbrite_object(response, token)
     end
   end
